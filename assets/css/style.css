@@ -1,0 +1,47 @@
+body {
+    background-image: url("../images/dark-honeycomb.png");
+    color: white;
+}
+
+h1 {
+    font-family: 'Bangers', cursive;
+    opacity: .75;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 55px;
+    color: tan;
+    padding: 25px;
+}
+
+h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 45px;
+    color: gray;
+    text-align: center;
+    padding: 15px;
+}
+
+h3 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 25px;
+    text-align: center;
+    padding: 15px;
+}
+
+h4 {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: underline;
+}
+
+p {
+    padding: 20px;
+}
+
+#wins {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    color: gold;
+    letter-spacing: 5px;
+}
