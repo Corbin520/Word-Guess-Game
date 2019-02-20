@@ -1,91 +1,51 @@
- // userGuess needs to display a letter on a - when it is guessed correctly //
-
-// I will need to call on something with HTML to display these letters for the user //
-
-// Now that its all layed out, focus on one at a time. Finish Roczen before you move to a different one //
-
-// Start concol.log things to see if it works // look into different objects such as getElementById //
 
 
-
-var riderChoice = ['roczen', 'anderson', 'wilson'];
-
-var word1 = "roczen";
-var word2 = "anderson";
-var word3 = "wilson";
-var space = "_"
-
-var roczenSpell = ["r", "o", "c", "z", "e", "n"];
-var andersonSpell = ["a", "n", "d", "e", "r", "s", "o", "n"];
-var wislonSpell = ["w", "i", "l", "s", "o", "n"];
-
+var riderChoices = ["roczen", "anderson", "wilson"];
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "I", "j", "k", "l", "m",
-                "n","o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-                
+                "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+var lettersGuessed = [];
+var selectedWord = [];
+
 
 var wins = 0;
 var remaining = 13;
+                    // Variables Above //
+
+var currentWordText = document.getElementById("current-word");
+var guessesText = document.getElementById("guesses-left");
+var lettersText = document.getElementById("letters-used");
+var winsText = document.getElementById("wins");
+
+var randomIndex = Math.floor(Math.random() * riderChoices.length);
+
+var riderChoice = riderChoices[randomIndex];
+console.log(riderChoice);
 
 
-var riderChoice = event.key
 
-// Math.random will choose a random rider from riderChoice for the user to guess //
-var riderChoice = riderChoice[Math.floor(Math.random() * riderChoice.length)];
+document.onkeyup = function(event) {
+    var userGuess = event.key.toLowerCase();
 
-
-// Roczen hang-man If/Else //
-if ((userGuess === "r") || (userGuess === "o") || (userGuess === "c") || (userGuess === "z") ||
-(userGuess === "e") || (userGuess === "n")) {
+    if (alphabet.includes(userGuess)) {
+        if (lettersGuessed.includes(userGuess) === false) {
+            lettersGuessed.push(userGuess);
+        }
     
+        if (riderChoice.includes(userGuess)) {
+            //  User Guessed correctly //
+            console.log("correctly");
+        } else {
+            // user guessed in-correctly //
+           console.log("incorrect");
+           remaining--;
+        }
+        if (lettersGuessed.includes(riderChoice))
 
-    
-} else {
-    remaining--;
+        // this text below will display after the user presses a key a-z //
+        currentWordText.textContent = "Current Word:  "+ riderChoice.length.fill("_");
+        guessesText.textContent = "Remaining Guesses: " + remaining;
+        lettersText.textContent = "Letters Guessed:  " + lettersGuessed.join(", ");
+        winsText.textContent
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Anderson hang-man If/Else //
-// if ((userGuess === "a") || (userGuess === "n") || (userGuess === "d") || (userGuess === "e") ||
-// (userGuess === "r") || (userGuess === "s") || (userGuess === "o") || (userGuess === "n")) {
-
-//     console.log()
-
-// } else {
-//     remaining--;
-// }
-
-// // Wilson hang-man If/Else //
-// if ((userGuess === "w") || (userGuess === "i") || (userGuess === "l") || (userGuess === "s") ||
-// (userGuess === "o") || (userGuess === "n")) {
-
-//     console.log()
-
-// } else {
-//     remaining--;
-// }

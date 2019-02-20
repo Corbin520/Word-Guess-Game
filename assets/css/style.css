@@ -1,3 +1,5 @@
+
+
 body {
     background-image: url("../images/dark-honeycomb.png");
     color: white;
@@ -18,19 +20,19 @@ h2 {
     font-size: 45px;
     color: gray;
     text-align: center;
-    padding: 15px;
+    padding: 10px 10px 0 0;
 }
 
 h3 {
     font-family: 'ZCOOL QingKe HuangYou', cursive;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     padding: 15px;
 }
 
 h4 {
     font-family: 'ZCOOL QingKe HuangYou', cursive;
-    font-size: 20px;
+    font-size: 25px;
     padding: 20px;
     text-decoration: underline;
 }

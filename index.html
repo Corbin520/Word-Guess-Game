@@ -9,24 +9,25 @@
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <script src="./assets/javascript/game.js" type="text/javascript"></script>
     <title>Word Guess game</title>
 </head>
 <body>
     
-    <div class="container"> 
-        <h1>HANGMAN Supercross addition</h1>
-        <div class="main-content">
-            <h2>Press any key to get started!</h2>
-            <h3>*HINT* You can research the rider in the photos to help you guess the name</h3>
-            <h4>How good are you doing?</h4>
-            <p id="current-word">Current Word:</p>
-            <p id="guesses-left">Number of guesses remaining:</p>
-            <p id="letters-used">Letters already guesses:</p>
-            <p id="wins">Wins:</p>
-        </div>
+    <div class="main-content">
+        <h1>HANGMAN Supercross addition</h1> 
+        <h2>Press any key to get started!</h2>
+        <h3>*HINT* You can research the rider in the photos to help you guess the answer. . . Good Luck.</h3>
+        <h4>How good are you doing?</h4>
+
+        <!-- Text Below is what we will be interacting with -- OR be calling on from text content -->
+        <p id="current-word"></p>
+        <p id="guesses-left"></p>
+        <p id="letters-used"></p>
+        <p id="wins"></p>
+        <p id="dash"></p>
     </div>
+    
 
-
+    <script src="./assets/javascript/game.js" type="text/javascript"></script>
 </body>
 </html>
