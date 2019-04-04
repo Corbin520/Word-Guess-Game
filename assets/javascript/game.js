@@ -27,8 +27,6 @@ function startGame() {
     randomIndex = Math.floor(Math.random() * riderChoices.length);
     // storing the random rider to riderChoice
     riderChoice = riderChoices[randomIndex];
-    // show the rider in the console // just for grading and testing
-    console.log(riderChoice);
     // empty arrays that we will be pushing content into
     underscores = [];
     lettersGuessed = [];
@@ -40,6 +38,9 @@ function startGame() {
         underscores.push("_");
     }
 
+    // Alternatives:
+    // var underscores = Array.from(riderChoice, function(e) {return "_";})
+    // var underscores = riderChoice.split("").fill("_")
 
     // displaying "current word: " + the underscores for the user to see before they guess
     currentWordText.textContent = "Current Word:  " + underscores.join(" ");
@@ -76,7 +77,7 @@ document.onkeyup = function (event) {
                     //your user types a letter that exist in your rider choice
                     letterFound = true;
                     underscores[i] = userGuess;
-                   
+                    // break; // we don't want this here in this case, why?  break stops the loop
                 }
             }
             // if the letter wasnt in word 
@@ -89,6 +90,7 @@ document.onkeyup = function (event) {
             if (remaining <= 0) {
                 // alert the user and ask if they want to continue
                 if (confirm("you lost, would you like to continue?")) {
+                    
                     // start the game over
                     startGame()
                 }
